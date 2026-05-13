@@ -1,1 +1,0 @@
-(Copy of Footer.tsx from globe-grabber-pro/site/ - to be filled in real run)

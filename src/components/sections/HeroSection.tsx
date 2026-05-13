@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="relative -mt-32 md:-mt-48 z-10 w-full max-w-4xl bg-primary-900 p-8 md:p-16 shadow-2xl">
         <div className="text-left space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
-            IEEE GLOBECOM 2026
+            IEEE GLOBECOM 2026d
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Macau S.A.R., China

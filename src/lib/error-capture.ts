@@ -1,1 +1,0 @@
-(Copy of error-capture.ts from globe-grabber-pro/lib/ - to be filled in real run)

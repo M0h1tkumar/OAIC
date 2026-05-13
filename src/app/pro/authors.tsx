@@ -1,1 +1,0 @@
-(Copy of authors.tsx from globe-grabber-pro/routes/ - to be filled in real run)
