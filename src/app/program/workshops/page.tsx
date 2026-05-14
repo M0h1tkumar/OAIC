@@ -7,7 +7,7 @@ import Section from '@/components/layout/Section';
 export const metadata: Metadata = {
   title: 'Workshops',
   description:
-    'Co-located workshops at OAIC 2024 covering hands-on AI topics.',
+    'Co-located workshops at OAIC 2026 covering hands-on AI topics.',
 };
 
 export default function WorkshopsPage() {

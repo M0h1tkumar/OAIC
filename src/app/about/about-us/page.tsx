@@ -6,7 +6,7 @@ import SectionHeader from '@/components/layout/SectionHeader';
 export const metadata: Metadata = {
   title: 'About OAIC',
   description:
-    'Learn about the Odisha AI Congress (OAIC), a premier event for AI research and innovation in India.',
+    'Learn about the 2026 1st Odisha AI Conference (OAIC), a premier event for AI research and innovation in India.',
 };
 
 export default function AboutUsPage() {
@@ -14,36 +14,33 @@ export default function AboutUsPage() {
     <>
       <PageHeader
         title="About The Conference"
-        description="Learn more about the Odisha AI Congress (OAIC), a premier event dedicated to advancing Artificial Intelligence."
+        description="Learn more about the 2026 1st Odisha AI Conference (OAIC)."
         breadcrumbs={[{ href: '/about/about-us', label: 'About Us' }]}
       />
 
       <Section>
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto">
           <SectionHeader
             subtitle="Fostering Innovation"
-            title="The Odisha AI Congress (OAIC)"
+            title="The 2026 1st Odisha AI Conference (OAIC)"
           />
-          <div className="prose prose-lg mt-6">
+          <div className="prose prose-lg mt-6 text-gray-700">
             <p>
-              The Odisha AI Congress (OAIC) is the region&apos;s leading conference
-              for artificial intelligence and machine learning. Our mission is to
-              bring together researchers, practitioners, and industry leaders to
-              share knowledge, foster collaboration, and drive innovation in AI.
+              The <strong>2026 1st Odisha AI Conference (OAIC)</strong> will serve as a premier platform for exchanging ideas, presenting research findings, and fostering collaborations that address real-world challenges through AI-driven solutions.
             </p>
             <p>
-              Hosted in the vibrant city of Bhubaneswar, OAIC provides a dynamic
-              platform for presenting cutting-edge research, discussing the
-              latest trends, and exploring the future of AI. The congress
-              features keynote speeches from world-renowned experts, technical
-              sessions, workshops, and tutorials covering a wide spectrum of AI
-              topics.
+              OAIC focuses on both theoretical developments and practical applications of AI across diverse domains, emphasizing ethical AI, sustainable development, and the integration of AI with emerging technologies to drive societal and economic transformation.
             </p>
+            <h3 className="text-xl font-bold mt-8 mb-4">About the Host: Siksha &apos;O&apos; Anusandhan (SOA)</h3>
             <p>
-              Join us to be a part of a growing community dedicated to shaping
-              the future of technology and unlocking the transformative
-              potential of Artificial Intelligence in India and beyond.
+              <strong>Siksha &apos;O&apos; Anusandhan (Deemed to be University)</strong>, Bhubaneswar, declared u/s 3 of UGC Act, 1956, is a leading university in India offering professional programs in multiple disciplines. Today, it has emerged as one of the fastest-growing universities in the country, providing a vibrant atmosphere for teaching-learning, research and development, and socially inclusive extension activities.
             </p>
+            <ul className="list-disc pl-6 mt-4 space-y-2">
+              <li><strong>NAAC:</strong> Accredited with &apos;A++&apos; grade (3rd Cycle).</li>
+              <li><strong>QS World University Ranking 2023:</strong> One of only 35 institutions in India to be ranked internationally.</li>
+              <li><strong>Times Higher Education World University Ranking 2023:</strong> Placed 89th in India.</li>
+              <li><strong>MHRD NIRF India Rankings 2026:</strong> 14th in University Category, 26th in Engineering.</li>
+            </ul>
           </div>
         </div>
       </Section>

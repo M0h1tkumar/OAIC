@@ -24,7 +24,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/Alert';
 export const metadata: Metadata = {
   title: 'Visa Information',
   description:
-    'Visa requirements and application guide for attending OAIC 2024 in Bhubaneswar, India.',
+    'Visa requirements and application guide for attending OAIC 2026 in Bhubaneswar, India.',
 };
 
 const visaCategories = [
@@ -68,49 +68,51 @@ export default function VisaPage() {
     <>
       <PageHeader
         title="Visa Information"
-        description="Planning your travel to OAIC 2024 in Bhubaneswar, India."
+        description="Planning your travel to OAIC 2026 in Bhubaneswar, India."
         breadcrumbs={[{ href: '/travel/visa', label: 'Visa Information' }]}
       />
-      <Section className="pb-24">
-        <div className="mx-auto max-w-5xl">
-          <Alert className="mb-12">
-            <AlertTriangle className="h-4 w-4" />
-            <AlertTitle>Disclaimer</AlertTitle>
-            <AlertDescription>
+      <Section>
+        <div className="mx-auto max-w-4xl">
+          <Alert className="mb-12 border-primary-100 bg-primary-50/50">
+            <AlertTriangle className="h-5 w-5 text-primary-600" />
+            <AlertTitle className="text-primary-900 font-bold">Important Disclaimer</AlertTitle>
+            <AlertDescription className="text-primary-800">
               Visa regulations are subject to change. Please verify all
               information with your local Indian embassy or the official
               government portal.
             </AlertDescription>
           </Alert>
 
-          <Card className="mb-12">
-            <CardHeader>
-              <CardTitle>Visa Requirements</CardTitle>
-              <CardDescription>
+          <Card className="mb-12 border-none shadow-md overflow-hidden">
+            <CardHeader className="bg-primary-900 text-white p-6 md:p-8">
+              <CardTitle className="text-2xl md:text-3xl">Visa Requirements</CardTitle>
+              <CardDescription className="text-primary-100 opacity-90 mt-2">
                 Most international visitors require a visa. The Indian
-                government offers e-Visas for 165+ countries. Apply at least 4
+                government offers e-Visas for 165+ countries. We recommend applying at least 4
                 weeks before travel.
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-0">
               <Table>
                 <TableHeader>
-                  <TableRow>
-                    <TableHead>Country/Region</TableHead>
-                    <TableHead>Visa Type</TableHead>
-                    <TableHead>Notes</TableHead>
+                  <TableRow className="bg-gray-50 hover:bg-gray-50">
+                    <TableHead className="font-bold text-gray-900 py-4 px-6">Country/Region</TableHead>
+                    <TableHead className="font-bold text-gray-900 py-4 px-6">Visa Type</TableHead>
+                    <TableHead className="font-bold text-gray-900 py-4 px-6">Notes</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {visaCategories.map((row) => (
                     <TableRow key={row.country}>
-                      <TableCell className="font-medium">
+                      <TableCell className="font-semibold text-gray-800 py-4 px-6">
                         {row.country}
                       </TableCell>
-                      <TableCell>
-                        <Badge>{row.type}</Badge>
+                      <TableCell className="py-4 px-6">
+                        <Badge className="bg-primary-100 text-primary-800 border-none px-3 py-1">{row.type}</Badge>
                       </TableCell>
-                      <TableCell>{row.notes}</TableCell>
+                      <TableCell className="text-gray-600 py-4 px-6 leading-relaxed text-sm">
+                        {row.notes}
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -118,21 +120,21 @@ export default function VisaPage() {
             </CardContent>
           </Card>
 
-          <Card className="mb-12">
-            <CardHeader>
-              <CardTitle>Application Guide</CardTitle>
-              <CardDescription>
-                Follow these steps to apply for your e-Visa.
+          <Card className="mb-12 border-none shadow-md">
+            <CardHeader className="border-b bg-gray-50/50 p-6 md:p-8">
+              <CardTitle className="text-2xl md:text-3xl text-primary-900">Application Guide</CardTitle>
+              <CardDescription className="text-gray-600 mt-2">
+                Step-by-step instructions to apply for your Indian e-Visa.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <ol className="space-y-4">
+            <CardContent className="p-6 md:p-8">
+              <ol className="space-y-6">
                 {applicationSteps.map((step, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="mr-4 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
+                  <li key={i} className="flex items-start group">
+                    <span className="mr-6 mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-900 text-white text-lg font-bold shadow-lg group-hover:scale-110 transition-transform">
                       {i + 1}
                     </span>
-                    <span className="flex-1 text-muted-foreground">
+                    <span className="flex-1 text-gray-700 leading-relaxed pt-1.5 md:text-lg">
                       {step}
                     </span>
                   </li>
@@ -141,17 +143,17 @@ export default function VisaPage() {
             </CardContent>
           </Card>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button as="a" size="lg">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <Button as="a" size="lg" className="w-full sm:w-auto bg-primary-700 hover:bg-primary-800 text-white px-10 py-7 text-lg font-bold shadow-xl rounded-none">
               <a
                 href="https://indianvisaonline.gov.in"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ExternalLink className="mr-2 h-4 w-4" /> Indian e-Visa Portal
+                <ExternalLink className="mr-2 h-5 w-5" /> Indian e-Visa Portal
               </a>
             </Button>
-            <Button as="a" variant="secondary" size="lg">
+            <Button as="a" variant="secondary" size="lg" className="w-full sm:w-auto bg-white text-primary-900 hover:bg-gray-100 border-primary-900 px-10 py-7 text-lg font-bold shadow-md rounded-none">
               <a href="mailto:info@oaic2024.in?subject=Invitation Letter Request">
                 Request Invitation Letter
               </a>

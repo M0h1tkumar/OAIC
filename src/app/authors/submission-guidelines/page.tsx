@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/Button';
 import {
   Card,
   CardContent,
-  
+
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -21,14 +21,14 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/Alert';
 export const metadata: Metadata = {
   title: 'Submission Guidelines',
   description:
-    'Everything you need to know to prepare and submit your paper to OAIC 2024.',
+    'Everything you need to know to prepare and submit your paper to OAIC 2026.',
 };
 
 function GeneralGuidelines() {
   return (
     <div className="prose">
       <p>
-        All papers submitted to OAIC 2024 must be original, unpublished work not
+        All papers submitted to OAIC 2026 must be original, unpublished work not
         currently under review at any other venue. Submissions must be in
         English and comply with the IEEE double-column conference format.
       </p>
@@ -93,7 +93,7 @@ function EthicsPolicy() {
         <AlertTriangle className="h-4 w-4" />
         <AlertTitle>Commitment to Integrity</AlertTitle>
         <AlertDescription>
-          OAIC 2024 is committed to the highest standards of publication ethics
+          OAIC 2026 is committed to the highest standards of publication ethics
           and takes all forms of misconduct seriously, including plagiarism,
           data fabrication, and improper authorship.
         </AlertDescription>
@@ -137,7 +137,7 @@ function CameraReady() {
       <p>
         After acceptance, authors must prepare and submit the camera-ready
         version by{' '}
-        <strong className="font-semibold">September 10, 2024</strong>.
+        <strong className="font-semibold">September 10, 2026</strong>.
       </p>
       <ul>
         {[
@@ -167,7 +167,7 @@ export default function SubmissionGuidelinesPage() {
     <>
       <PageHeader
         title="Submission Guidelines"
-        description="Everything you need to know to prepare and submit your paper to OAIC 2024."
+        description="Everything you need to know to prepare and submit your paper to OAIC 2026."
         breadcrumbs={[
           {
             href: '/authors/submission-guidelines',
@@ -175,21 +175,23 @@ export default function SubmissionGuidelinesPage() {
           },
         ]}
       />
-      <Section className="pb-24">
-        <Tabs defaultValue="general" className="mx-auto max-w-4xl">
-          <TabsList>
+      <Section>
+        <div className="mx-auto max-w-4xl">
+          <Tabs defaultValue="general">
+            <TabsList className="bg-gray-100 p-1">
+              {TABS.map((tab) => (
+                <TabsTrigger key={tab.value} value={tab.value} className="py-2.5 px-4">
+                  {tab.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
             {TABS.map((tab) => (
-              <TabsTrigger key={tab.value} value={tab.value}>
-                {tab.label}
-              </TabsTrigger>
+              <TabsContent key={tab.value} value={tab.value} className="pt-10">
+                <tab.component />
+              </TabsContent>
             ))}
-          </TabsList>
-          {TABS.map((tab) => (
-            <TabsContent key={tab.value} value={tab.value} className="pt-6">
-              <tab.component />
-            </TabsContent>
-          ))}
-        </Tabs>
+          </Tabs>
+        </div>
       </Section>
     </>
   );

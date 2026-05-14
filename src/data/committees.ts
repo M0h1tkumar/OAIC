@@ -1,23 +1,22 @@
 import type { CommitteeMember } from '@/types';
 
 export const organizingCommittee: CommitteeMember[] = [
-  { name: 'Prof. Samaresh Mishra', role: 'General Chair', institution: 'KIIT University, Bhubaneswar' },
-  { name: 'Dr. Lipika Datta', role: 'Program Chair', institution: 'IIIT Bhubaneswar' },
-  { name: 'Prof. Amitabh Mishra', role: 'Finance Chair', institution: 'NIT Rourkela' },
-  { name: 'Dr. Padmalaya Nayak', role: 'Publications Chair', institution: 'C.V. Raman Global University' },
-  { name: 'Prof. Srikanta Patnaik', role: 'Patron', institution: 'SOA University, Bhubaneswar' },
-  { name: 'Dr. Manas Ranjan Patra', role: 'Local Arrangements Chair', institution: 'Berhampur University' },
-  { name: 'Dr. Arup Kumar Bhattacharjee', role: 'Publicity Chair', institution: 'NIT Silchar' },
-  { name: 'Dr. Sujata Dash', role: 'Tutorial Chair', institution: 'North Orissa University' },
+  { name: 'Prof. Ashutosh Dutta', role: 'Conference Chair', institution: 'Johns Hopkins University Applied Physics Labs (JHU/APL), USA' },
+  { name: 'Prof. Subhransu Ranjan Samantaray', role: 'Conference Chair', institution: 'IIT Bhubaneswar, India' },
+  { name: 'Prof. Abani K Patra', role: 'Technical Program Chair', institution: 'Tufts University, USA' },
+  { name: 'Prof. Renu Sharma', role: 'Publication Chair & Webmaster', institution: "ITER, Siksha 'O' Anusandhan, India" },
+  { name: 'Prof. Manas Kumar Mallick', role: 'Conference Treasurer', institution: "ITER, Siksha 'O' Anusandhan, India" },
+  { name: 'Dr. Bharat Jyoti Sahu', role: 'Information Contact', institution: "ITER, Siksha 'O' Anusandhan, India" },
+  { name: 'Dr. Apul Narayan Dev', role: 'Information Contact', institution: "ITER, Siksha 'O' Anusandhan, India" },
 ];
 
 export const technicalProgramCommittee: CommitteeMember[] = [
   { name: 'Prof. Ajith Abraham', role: 'TPC Chair', institution: 'MIR Labs, USA' },
   { name: 'Dr. Bhabani Shankar Prasad Mishra', role: 'TPC Co-Chair', institution: 'KIIT University' },
-  { name: 'Dr. Deepak Ranjan Nayak', role: 'Track Chair — Computer Vision', institution: 'NIT Rourkela' },
-  { name: 'Prof. Rajib Mall', role: 'Track Chair — Software Engineering', institution: 'IIT Kharagpur' },
-  { name: 'Dr. Chhabi Rani Panigrahi', role: 'Track Chair — IoT & Edge AI', institution: 'IIIT Bhubaneswar' },
-  { name: 'Dr. Manmath Narayan Sahoo', role: 'Track Chair — Networks', institution: 'NIT Rourkela' },
+  { name: 'Dr. Deepak Ranjan Nayak', role: 'Track Chair - Computer Vision', institution: 'NIT Rourkela' },
+  { name: 'Prof. Rajib Mall', role: 'Track Chair - Software Engineering', institution: 'IIT Kharagpur' },
+  { name: 'Dr. Chhabi Rani Panigrahi', role: 'Track Chair - IoT & Edge AI', institution: 'IIIT Bhubaneswar' },
+  { name: 'Dr. Manmath Narayan Sahoo', role: 'Track Chair - Networks', institution: 'NIT Rourkela' },
   { name: 'Dr. Bibudhendu Pati', role: 'TPC Member', institution: 'C.V. Raman Global University' },
   { name: 'Dr. Sanjaya Kumar Panda', role: 'TPC Member', institution: 'NIT Warangal' },
   { name: 'Prof. Satchidananda Dehuri', role: 'TPC Member', institution: 'Fakir Mohan University' },

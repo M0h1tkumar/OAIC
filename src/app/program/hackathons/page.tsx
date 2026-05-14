@@ -16,32 +16,32 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Hackathon',
   description:
-    'Join the OAIC 2024 Hackathon — build AI solutions for real-world problems in Odisha and India.',
+    'Join the OAIC 2026 Hackathon - build AI solutions for real-world problems in Odisha and India.',
 };
 
 const timeline = [
   {
     icon: Lightbulb,
     label: 'Registration',
-    date: 'July 1, 2024',
+    date: 'July 1, 2026',
     desc: 'Team registration opens. Teams of 2–4.',
   },
   {
     icon: Code2,
     label: 'Ideation Phase',
-    date: 'October 14, 2024',
+    date: 'October 14, 2026',
     desc: 'Submit your project idea and team details.',
   },
   {
     icon: Zap,
     label: 'Hacking Begins',
-    date: 'October 15, 2024',
+    date: 'October 15, 2026',
     desc: '24-hour build sprint at the conference venue.',
   },
   {
     icon: Trophy,
     label: 'Demo Day & Awards',
-    date: 'October 17, 2024',
+    date: 'October 17, 2026',
     desc: 'Present to judges. Top 3 teams win prizes.',
   },
 ];
@@ -74,7 +74,7 @@ export default function HackathonsPage() {
       />
       <Section className="pb-24">
         <div className="text-center">
-          <Badge>Hackathon Theme 2024</Badge>
+          <Badge>Hackathon Theme 2026</Badge>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
             AI for <span className="text-primary">Odisha</span>
           </h1>

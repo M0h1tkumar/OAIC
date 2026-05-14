@@ -6,7 +6,7 @@ import Section from '@/components/layout/Section';
 
 export const metadata: Metadata = {
   title: 'Organizing Committee',
-  description: 'Meet the organizing committee of OAIC 2024.',
+  description: 'Meet the organizing committee of OAIC 2026.',
 };
 
 export default function OrganizingCommitteePage() {
@@ -14,17 +14,19 @@ export default function OrganizingCommitteePage() {
     <>
       <PageHeader
         title="Organizing Committee"
-        description="The dedicated team working to make OAIC 2024 a world-class conference."
+        description="The dedicated team working to make OAIC 2026 a world-class conference."
         breadcrumbs={[
           { href: '/committees/organizing', label: 'Organizing Committee' },
         ]}
       />
       <Section>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {organizingCommittee.map((member) => (
-            <CommitteeMemberCard key={member.name} member={member} />
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {organizingCommittee.map((member) => (
+              <div key={member.name} className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] max-w-sm">
+                <CommitteeMemberCard member={member} />
+              </div>
+            ))}
+          </div>
       </Section>
     </>
   );

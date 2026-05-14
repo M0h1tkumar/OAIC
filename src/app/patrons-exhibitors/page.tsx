@@ -5,7 +5,7 @@ import PageHeader from '@/components/layout/PageHeader';
 export const metadata: Metadata = {
   title: 'Sponsors & Exhibitors',
   description:
-    'Partner with OAIC 2024 — sponsorship and exhibition opportunities.',
+    'Partner with OAIC 2026 - sponsorship and exhibition opportunities.',
 };
 
 export default function PatronsExhibitorsPage() {
@@ -13,7 +13,7 @@ export default function PatronsExhibitorsPage() {
     <>
       <PageHeader
         title="Sponsors & Exhibitors"
-        description="Partner with OAIC 2024 and connect with India's leading AI and Computer Science research community."
+        description="Partner with OAIC 2026 and connect with India's leading AI and Computer Science research community."
         breadcrumbs={[
           { href: '/patrons-exhibitors', label: 'Sponsors & Exhibitors' },
         ]}

@@ -21,11 +21,11 @@ export default function Navbar() {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
-
-// Removed effect that set state synchronously on pathname change, as per React best practices. (Reset should be handled via explicit handlers on navigation.)
-
 
   const handleMouseEnter = (label: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <>
       <a href="#main-content" className="skip-link">Skip to main content</a>
-      
+
       {/* Top Bar */}
       <div className="bg-primary-800 text-white text-xs py-1">
         <div className="container-wide flex justify-between items-center">
@@ -70,7 +70,7 @@ export default function Navbar() {
       >
         <div className="container-wide flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-3" aria-label="OAIC 2026 - Home">
-            <div className="text-3xl font-bold text-primary-900 tracking-tighter">OAIC 2026</div>
+            <Image src="/images/logo.png" alt="OAIC 2026 Logo" className="h-12 w-auto object-contain" width={160} height={48} priority />
           </Link>
 
           <nav className="hidden lg:flex items-center" aria-label="Primary navigation">
@@ -118,9 +118,9 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <form className="relative hidden md:block">
-              <input 
-                type="search" 
-                placeholder="Search" 
+              <input
+                type="search"
+                placeholder="Search"
                 className="pl-4 pr-10 py-2 text-sm border border-gray-300 rounded-md focus:ring-primary-500 focus:border-primary-500"
               />
               <button type="submit" className="absolute right-0 top-0 h-full px-3 text-gray-500 hover:text-primary-600">
@@ -128,7 +128,7 @@ export default function Navbar() {
               </button>
             </form>
             <button
-              className="lg:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100"
+              className="lg:hidden p-2 -mr-2 rounded-md text-gray-600 hover:bg-gray-100 transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Open navigation menu"
             >
@@ -137,9 +137,9 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-      
+
       {/* Mobile Drawer */}
-      <div 
+      <div
         className={cn(
           "fixed inset-0 z-50 lg:hidden",
           mobileOpen ? "block" : "hidden"
@@ -149,7 +149,7 @@ export default function Navbar() {
         <div className="relative flex flex-col w-full max-w-xs h-full bg-white shadow-xl">
           <div className="flex items-center justify-between px-4 py-3 border-b">
             <Link href="/" className="flex items-center gap-2">
-              <div className="text-2xl font-bold text-primary-900 tracking-tighter">OAIC 2026</div>
+              <Image src="/images/logo.png" alt="OAIC 2026 Logo" className="h-10 w-auto object-contain" width={120} height={40} />
             </Link>
             <button onClick={() => setMobileOpen(false)} className="p-2 text-gray-500" aria-label="Close menu">
               <X className="w-6 h-6" />
@@ -160,8 +160,13 @@ export default function Navbar() {
               <MobileNavItem key={item.label} item={item} pathname={pathname} />
             ))}
           </nav>
-          <div className="p-4 border-t">
-            <Button as={Link} href="/registration/fees" className="w-full bg-accent-cyan hover:bg-blue-400 text-white rounded-none border-none py-3 shadow-sm text-center font-bold">
+          <div className="p-4 border-t bg-gray-50">
+            <Button 
+              as={Link} 
+              href="/registration/fees" 
+              className="w-full bg-primary-700 hover:bg-primary-800 text-white rounded-md py-3 shadow-md text-center font-bold text-lg"
+              onClick={() => setMobileOpen(false)}
+            >
               Register Now
             </Button>
           </div>
@@ -195,7 +200,7 @@ function MobileNavItem({ item, pathname }: { item: NavItem; pathname: string }) 
         onClick={() => setOpen(!open)}
         className={cn(
           'w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium',
-           isActive ? 'text-primary-700 bg-primary-100' : 'text-gray-700 hover:bg-gray-100'
+          isActive ? 'text-primary-700 bg-primary-100' : 'text-gray-700 hover:bg-gray-100'
         )}
       >
         <span>{item.label}</span>

@@ -23,7 +23,7 @@ const footerNav = {
   ],
   about: [
     { label: 'About OAIC', href: '/about/about-us' },
-    { label: 'Organizers', href: '#' },
+    { label: 'Siksha \'O\' Anusandhan', href: 'https://www.soa.ac.in/' },
   ],
   contact: [
     { label: 'Contact Us', href: '/about/contact' },
@@ -32,7 +32,7 @@ const footerNav = {
 };
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026;
 
   return (
     <footer role="contentinfo">
@@ -42,13 +42,13 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="col-span-2 lg:col-span-2">
               <Link href="/" className="mb-4 inline-block">
-                <div className="text-2xl font-bold text-white tracking-tighter">OAIC 2026</div>
+                <Image src="/images/logo.png" alt="OAIC 2026 Logo" className="h-14 w-auto object-contain" width={168} height={56} priority />
               </Link>
               <Link href="/authors/submission-guidelines" className="text-accent-cyan hover:underline font-semibold flex items-center gap-2">
                 Submit a Paper →
               </Link>
             </div>
-            
+
             {Object.entries(footerNav).map(([key, links]) => (
               <div key={key}>
                 <h3 className="font-bold text-lg mb-4 capitalize">{key}</h3>
@@ -70,7 +70,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="bg-primary-900 text-gray-300 py-4">
         <div className="container-wide flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {currentYear} OAIC 2026 — Bhubaneswar, Odisha, India</p>
+          <p>&copy; {currentYear} OAIC 2026</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <div className="flex gap-4">
               {socialLinks.map(social => (
@@ -89,11 +89,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Copyright Bar */}
       <div className="bg-gray-100 text-gray-600 text-xs py-3">
         <div className="container-wide text-center md:text-left">
-          <p>&copy; Copyright {currentYear} OAIC Organizing Committee. All rights reserved.</p>
+          <p>&copy; Copyright {currentYear} Siksha &apos;O&apos; Anusandhan &amp; OAIC – All rights reserved.</p>
         </div>
       </div>
     </footer>

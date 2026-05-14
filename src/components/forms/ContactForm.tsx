@@ -45,11 +45,15 @@ export default function ContactForm() {
 }
 
 useEffect(() => {
+  let timer: ReturnType<typeof setTimeout>;
   if (mailtoLink) {
     window.location.href = mailtoLink;
     // Clear mailtoLink after navigation in a defer, to avoid cascading renders
-    setTimeout(() => setMailtoLink(null), 0);
+    timer = setTimeout(() => setMailtoLink(null), 0);
   }
+  return () => {
+    if (timer) clearTimeout(timer);
+  };
 }, [mailtoLink]);
 
 

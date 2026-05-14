@@ -21,7 +21,7 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <Badge>Workshop</Badge>
           <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            <Clock className="h-4 w-4" /> Day {workshop.day} — {workshop.time}
+            <Clock className="h-4 w-4" /> Day {workshop.day} - {workshop.time}
           </span>
           <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
             <MapPin className="h-4 w-4" /> {workshop.room}

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const cuisine = [
   {
     name: 'Dalma',
-    desc: 'The quintessential Odishan comfort dish — lentils slow-cooked with seasonal vegetables.',
+    desc: 'The quintessential Odishan comfort dish - lentils slow-cooked with seasonal vegetables.',
   },
   {
     name: 'Pakhala Bhata',
@@ -29,7 +29,7 @@ const cuisine = [
   },
   {
     name: 'Chhena Poda',
-    desc: "Odisha's signature dessert — a caramelized cottage cheese cake.",
+    desc: "Odisha's signature dessert - a caramelized cottage cheese cake.",
   },
   {
     name: 'Rasagola',
@@ -51,8 +51,9 @@ export default function AttractionsPage() {
       <Section>
         <SectionHeader
           title="Explore Odisha"
-          subtitle="World-class heritage sites and natural wonders, all within reach of Bhubaneswar."
-          className="mb-8"
+          subtitle="Heritage & Nature"
+          description="World-class heritage sites and natural wonders, all within reach of Bhubaneswar."
+          className="mb-10"
         />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {touristAttractions.map((attraction) => (
@@ -61,20 +62,23 @@ export default function AttractionsPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section className="bg-gray-100">
         <SectionHeader
           title="Taste of Odisha"
-          subtitle="Don't leave without trying these local delicacies."
-          className="mb-8"
+          subtitle="Local Delicacies"
+          description="Don't leave without trying these iconic traditional dishes."
+          className="mb-10"
         />
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {cuisine.map((dish) => (
-            <Card key={dish.name}>
-              <CardHeader>
-                <CardTitle>{dish.name}</CardTitle>
+            <Card key={dish.name} className="h-full hover:shadow-lg transition-shadow border-none">
+              <CardHeader className="bg-white">
+                <CardTitle className="text-xl text-primary-900">{dish.name}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription>{dish.desc}</CardDescription>
+              <CardContent className="bg-white">
+                <CardDescription className="text-gray-600 leading-relaxed italic">
+                  "{dish.desc}"
+                </CardDescription>
               </CardContent>
             </Card>
           ))}

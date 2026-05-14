@@ -6,7 +6,7 @@ import Section from '@/components/layout/Section';
 
 export const metadata: Metadata = {
   title: 'Operations Committee',
-  description: 'OAIC 2024 Operations Committee.',
+  description: 'OAIC 2026 Operations Committee.',
 };
 
 export default function OperationsCommitteePage() {
@@ -20,10 +20,14 @@ export default function OperationsCommitteePage() {
         ]}
       />
       <Section>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {operationsCommittee.map((member) => (
-            <CommitteeMemberCard key={member.name} member={member} />
-          ))}
+        <div className="container-wide">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {operationsCommittee.map((member) => (
+              <div key={member.name} className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] max-w-sm">
+                <CommitteeMemberCard member={member} />
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
     </>

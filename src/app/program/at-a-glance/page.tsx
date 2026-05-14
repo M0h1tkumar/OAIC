@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Program At a Glance',
   description:
-    'Full 3-day schedule of OAIC 2024 — keynotes, workshops, panels, and social events.',
+    'Full 3-day schedule of OAIC 2026 - keynotes, workshops, panels, and social events.',
 };
 
 const legendItems = [
@@ -23,7 +23,7 @@ export default function AtAGlancePage() {
     <>
       <PageHeader
         title="Program At a Glance"
-        description="Three days of world-class AI research, workshops, and networking. October 15–17, 2024."
+        description="Three days of world-class AI research, workshops, and networking. October 15–17, 2026."
         breadcrumbs={[
           { href: '/program/at-a-glance', label: 'Program At a Glance' },
         ]}

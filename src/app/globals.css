@@ -2,7 +2,7 @@
 
 /* ─── Tailwind v4 Design Tokens ──────────────────────────────────── */
 @theme {
-  /* Colors — Primary Rust Red palette */
+  /* Colors - Primary Rust Red palette */
   --color-primary-50:  #fdf4f2;
   --color-primary-100: #fae4df;
   --color-primary-200: #f6ccc2;
@@ -14,7 +14,7 @@
   --color-primary-800: #8d2e1c;
   --color-primary-900: #75291b;
 
-  /* Colors — Neutral Warm Gray palette */
+  /* Colors - Neutral Warm Gray palette */
   --color-gray-50:  #faf9f8;
   --color-gray-100: #f4f2f0;
   --color-gray-200: #e8e4df;
@@ -26,11 +26,11 @@
   --color-gray-800: #4a453f;
   --color-gray-900: #2e2a27;
 
-  /* Colors — Accents */
+  /* Colors - Accents */
   --color-accent-cyan: #3b82f6; /* Changed to a standard blue for links/accents */
   --color-accent-orange: #d97706; /* Golden amber */
 
-  /* Colors — Legacy (to be phased out) */
+  /* Colors - Legacy (to be phased out) */
   --color-earth-100: var(--color-gray-100);
   --color-earth-300: var(--color-gray-300);
   --color-dark-900: var(--color-gray-900);
@@ -121,10 +121,17 @@
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
+  @media (min-width: 640px) {
+    .container-wide {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
   @media (min-width: 1024px) {
     .container-wide {
       padding-left: 2rem;

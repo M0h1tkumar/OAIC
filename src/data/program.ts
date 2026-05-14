@@ -24,7 +24,7 @@ export const schedule: ScheduleSlot[] = [
   { day: 2, time: '14:30–16:00', title: 'Technical Session 4: AI Applications', type: 'panel', room: 'Hall A' },
   { day: 2, time: '14:30–16:00', title: 'Poster Session', type: 'panel', room: 'Exhibition Hall' },
   { day: 2, time: '16:00–16:30', title: 'Coffee Break', type: 'break' },
-  { day: 2, time: '16:30–18:00', title: 'Hackathon — Ideation Presentations', type: 'workshop', room: 'Main Hall' },
+  { day: 2, time: '16:30–18:00', title: 'Hackathon - Ideation Presentations', type: 'workshop', room: 'Main Hall' },
   { day: 2, time: '19:00–21:30', title: 'Conference Banquet Dinner', type: 'social', room: 'Grand Ballroom' },
 
   // Day 3 - October 17

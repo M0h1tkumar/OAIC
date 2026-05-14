@@ -5,7 +5,7 @@ import SectionHeader from '@/components/layout/SectionHeader';
 import {
   Card,
   CardContent,
-  
+
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -16,7 +16,7 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/Alert';
 export const metadata: Metadata = {
   title: 'Call for Poster Presentations',
   description:
-    'Submit your poster abstract for OAIC 2024. Share your work-in-progress and get feedback from the community.',
+    'Submit your poster abstract for OAIC 2026. Share your work-in-progress and get feedback from the community.',
 };
 
 const formatRequirements = [
@@ -60,7 +60,7 @@ export default function CallForPostersPage() {
             </CardHeader>
             <CardContent>
               <p className="text-lg text-muted-foreground">
-                Poster presentations at OAIC 2024 offer an excellent
+                Poster presentations at OAIC 2026 offer an excellent
                 opportunity to present your early-stage or work-in-progress
                 research to a diverse audience of AI researchers and
                 practitioners. The interactive format encourages direct
@@ -120,7 +120,7 @@ export default function CallForPostersPage() {
             <AlertTitle>Key Date</AlertTitle>
             <AlertDescription>
               Poster Submission Deadline:{' '}
-              <strong className="font-semibold">August 1, 2024</strong>
+              <strong className="font-semibold">August 1, 2026</strong>
             </AlertDescription>
           </Alert>
 

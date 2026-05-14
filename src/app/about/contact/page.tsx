@@ -9,7 +9,7 @@ import {
   Card,
   CardDescription,
   CardContent,
-  
+
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -127,7 +127,6 @@ export default function ContactPage() {
               </CardContent>
             </Card>
           </div>
-        </div>
       </Section>
     </>
   );

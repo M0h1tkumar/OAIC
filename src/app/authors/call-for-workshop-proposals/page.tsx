@@ -4,14 +4,14 @@ import {
   Calendar,
   FileDown,
   Check,
-  
+
 } from 'lucide-react';
 import Section from '@/components/layout/Section';
 import SectionHeader from '@/components/layout/SectionHeader';
 import {
   Card,
   CardContent,
-  
+
   CardHeader,
   CardTitle,
 } from '@/components/ui/Card';
@@ -20,7 +20,7 @@ import { Button } from '@/components/ui/Button';
 export const metadata: Metadata = {
   title: 'Call for Workshop Proposals',
   description:
-    'Submit your workshop proposal for OAIC 2024. We welcome industry and academic workshops on AI topics.',
+    'Submit your workshop proposal for OAIC 2026. We welcome industry and academic workshops on AI topics.',
 };
 
 const proposalTopics = [
@@ -35,11 +35,11 @@ const proposalTopics = [
 ];
 
 const keyDates = [
-  { date: 'June 30, 2024', event: 'Workshop Proposal Deadline' },
-  { date: 'July 20, 2024', event: 'Acceptance Notification' },
-  { date: 'August 15, 2024', event: 'Workshop Paper Deadline' },
-  { date: 'September 15, 2024', event: 'Workshop Camera-Ready' },
-  { date: 'October 15–17, 2024', event: 'Workshop Days' },
+  { date: 'June 30, 2026', event: 'Workshop Proposal Deadline' },
+  { date: 'July 20, 2026', event: 'Acceptance Notification' },
+  { date: 'August 15, 2026', event: 'Workshop Paper Deadline' },
+  { date: 'September 15, 2026', event: 'Workshop Camera-Ready' },
+  { date: 'October 15–17, 2026', event: 'Workshop Days' },
 ];
 
 export default function WorkshopProposalsPage() {
@@ -47,7 +47,7 @@ export default function WorkshopProposalsPage() {
     <>
       <PageHeader
         title="Call for Workshop Proposals"
-        description="Organise a focused workshop at OAIC 2024 on your AI research area or industry application."
+        description="Organise a focused workshop at OAIC 2026 on your AI research area or industry application."
         breadcrumbs={[
           {
             href: '/authors/call-for-workshop-proposals',
@@ -63,7 +63,7 @@ export default function WorkshopProposalsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-lg text-muted-foreground">
-                Workshops at OAIC 2024 are half-day or full-day focused events
+                Workshops at OAIC 2026 are half-day or full-day focused events
                 co-located with the main conference. They provide a platform for
                 in-depth discussions on emerging or specialised AI topics,
                 bringing together researchers and practitioners with shared

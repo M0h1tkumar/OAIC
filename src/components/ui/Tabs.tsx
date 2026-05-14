@@ -10,14 +10,16 @@ const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
 >(({ className, ...props }, ref) => (
-  <TabsPrimitive.List
-    ref={ref}
-    className={cn(
-      'inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground',
-      className,
-    )}
-    {...props}
-  />
+  <div className="w-full overflow-x-auto scrollbar-hide">
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        'inline-flex h-10 w-full min-w-max items-center justify-start rounded-md bg-muted p-1 text-muted-foreground md:justify-center md:min-w-0',
+        className,
+      )}
+      {...props}
+    />
+  </div>
 ));
 TabsList.displayName = TabsPrimitive.List.displayName;
 

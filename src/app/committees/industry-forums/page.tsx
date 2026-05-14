@@ -6,7 +6,7 @@ import Section from '@/components/layout/Section';
 
 export const metadata: Metadata = {
   title: 'Industry Forums & Exhibition Committee',
-  description: 'OAIC 2024 Industry Forums and Exhibition Committee.',
+  description: 'OAIC 2026 Industry Forums and Exhibition Committee.',
 };
 
 export default function IndustryForumsCommitteePage() {
@@ -23,10 +23,14 @@ export default function IndustryForumsCommitteePage() {
         ]}
       />
       <Section>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {industryForumsCommittee.map((member) => (
-            <CommitteeMemberCard key={member.name} member={member} />
-          ))}
+        <div className="container-wide">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {industryForumsCommittee.map((member) => (
+              <div key={member.name} className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] max-w-sm">
+                <CommitteeMemberCard member={member} />
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
     </>

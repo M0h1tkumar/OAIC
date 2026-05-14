@@ -10,14 +10,14 @@ import { Check } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Registration Fees',
   description:
-    'View OAIC 2024 registration fees for students, academics, industry, and international attendees.',
+    'View OAIC 2026 registration fees for students, academics, industry, and international attendees.',
 };
 
 const notes = [
   'GST at 18% applicable on all INR registrations.',
   'Payment accepted via NEFT/RTGS, credit/debit card, and UPI.',
-  'Cancellations before September 30, 2024 receive 50% refund.',
-  'No refunds after October 1, 2024.',
+  'Cancellations before September 30, 2026receive 50% refund.',
+  'No refunds after October 1, 2026.',
   'Each accepted paper requires at least one full registration.',
 ];
 
@@ -26,7 +26,7 @@ export default function RegistrationFeesPage() {
     <>
       <PageHeader
         title="Registration Fees"
-        description="Register early for the best rates. Early Bird closes September 15, 2024."
+        description="Register early for the best rates. Early Bird closes September 15, 2026."
         breadcrumbs={[
           { href: '/registration/fees', label: 'Registration Fees' },
         ]}
