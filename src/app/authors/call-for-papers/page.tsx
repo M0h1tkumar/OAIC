@@ -88,9 +88,9 @@ export default function CallForPapersPage() {
             ))}
           </div>
 
-          <div className="text-center pb-6 md:pb-8 px-4 md:px-0">
-            <Button as="a" href="#" target="_blank" rel="noopener noreferrer" className="bg-primary-600 hover:bg-primary-500 text-white text-base md:text-lg px-6 md:px-8 py-4 md:py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold w-full sm:w-auto">
-              Submit via EasyChair
+          <div className="text-center pb-8">
+            <Button as="a" href="https://edas.info/N35361" target="_blank" rel="noopener noreferrer" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
+              Submit via EDAS
             </Button>
           </div>
         </div>
