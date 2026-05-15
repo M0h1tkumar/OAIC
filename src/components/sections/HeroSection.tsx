@@ -16,12 +16,14 @@ const dummyImages = [
 export default function HeroSection() {
   const [progressWidth, setProgressWidth] = useState('0%');
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleMove = (splide: any) => {
     const end = splide.Components.Controller.getEnd() + 1;
     const rate = Math.min((splide.index + 1) / end, 1);
     setProgressWidth(`${100 * rate}%`);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleMounted = (splide: any) => {
     handleMove(splide); // Set initial progress
   };
