@@ -65,9 +65,13 @@ useEffect(() => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel className="text-[#002147] font-bold uppercase tracking-widest text-[10px]">Full Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your full name" {...field} />
+                <Input 
+                  placeholder="Your full name" 
+                  {...field} 
+                  className="rounded-none border-gray-200 focus:border-[#002147] focus:ring-0 transition-colors"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -78,9 +82,13 @@ useEffect(() => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email Address</FormLabel>
+              <FormLabel className="text-[#002147] font-bold uppercase tracking-widest text-[10px]">Email Address</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input 
+                  placeholder="your.email@example.com" 
+                  {...field} 
+                  className="rounded-none border-gray-200 focus:border-[#002147] focus:ring-0 transition-colors"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -91,9 +99,13 @@ useEffect(() => {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel className="text-[#002147] font-bold uppercase tracking-widest text-[10px]">Subject</FormLabel>
               <FormControl>
-                <Input placeholder="Subject of your inquiry" {...field} />
+                <Input 
+                  placeholder="Subject of your inquiry" 
+                  {...field} 
+                  className="rounded-none border-gray-200 focus:border-[#002147] focus:ring-0 transition-colors"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -104,11 +116,11 @@ useEffect(() => {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel className="text-[#002147] font-bold uppercase tracking-widest text-[10px]">Message</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Your message..."
-                  className="resize-none"
+                  className="resize-none rounded-none border-gray-200 focus:border-[#002147] focus:ring-0 transition-colors min-h-[120px]"
                   {...field}
                 />
               </FormControl>
@@ -116,7 +128,10 @@ useEffect(() => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
+        <Button 
+          type="submit" 
+          className="w-full bg-[#002147] hover:bg-[#003366] text-white rounded-none py-6 uppercase tracking-[0.2em] font-bold text-xs transition-all duration-300"
+        >
           Send Message
         </Button>
       </form>

@@ -48,22 +48,38 @@ export default function Navbar() {
     <>
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
-      {/* Top Bar */}
-      <div className="bg-primary-800 text-white text-xs py-1">
-        <div className="container-wide flex justify-between items-center">
-          <div className="flex items-center gap-x-6">
-            <Link href="https://www.ieee.org" className="hover:underline">IEEE.org</Link>
-            <Link href="https://www.comsoc.org" className="hover:underline">IEEE ComSoc</Link>
-            <Link href="https://dl.ieee.org/Xplore/home.jsp" className="hover:underline">IEEE Xplore</Link>
+      {/* Top Utility Bar - IEEE Style */}
+      <div className="bg-[#08283C] text-white/90 border-b border-white/5 relative z-[60]">
+        <div className="container-wide flex justify-between items-center h-10">
+          {/* Left: Global IEEE Links */}
+          <div className="flex items-center h-full">
+            <div className="flex items-center">
+              <Link href="https://www.ieee.org" className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] hover:text-white hover:bg-[#0C527D] transition-all px-4 h-10 flex items-center">
+                IEEE.org
+              </Link>
+              <div className="w-px h-3 bg-white/10" />
+              <Link href="https://www.comsoc.org" className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] hover:text-white hover:bg-[#0C527D] transition-all px-4 h-10 flex items-center">
+                IEEE ComSoc
+              </Link>
+              <div className="w-px h-3 bg-white/10" />
+              <Link href="https://dl.ieee.org/Xplore/home.jsp" className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] hover:text-white hover:bg-[#0C527D] transition-all px-4 h-10 flex items-center">
+                IEEE Xplore
+              </Link>
+              <div className="hidden sm:block w-px h-3 bg-white/10" />
+              <button className="hidden sm:flex text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] hover:text-white hover:bg-[#0C527D] transition-all px-4 h-10 items-center gap-2">
+                More Sites <ChevronDown className="w-3 h-3 opacity-50" />
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-x-4">
-            <span>More Sites</span>
-            <div className="h-4 w-px bg-primary-700" />
-            <Link href="https://www.comsoc.org" target="_blank" rel="noopener noreferrer">
-              <Image src="/comsoc-logo.png" alt="IEEE ComSoc" className="h-6" width={100} height={24} />
+
+          {/* Right: Institutional Logos */}
+          <div className="flex items-center gap-6 h-full">
+            <Link href="https://www.comsoc.org" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+              <Image src="/comsoc-logo.png" alt="IEEE ComSoc" className="h-4 w-auto brightness-0 invert" width={100} height={16} />
             </Link>
-            <Link href="https://www.ieee.org" target="_blank" rel="noopener noreferrer">
-              <Image src="/ieee-logo.png" alt="IEEE" className="h-6" width={80} height={24} />
+            <div className="w-px h-4 bg-white/10 hidden md:block" />
+            <Link href="https://www.ieee.org" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+              <Image src="/ieee-logo.png" alt="IEEE" className="h-4 w-auto brightness-0 invert" width={70} height={16} />
             </Link>
           </div>
         </div>
