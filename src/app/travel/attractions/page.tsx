@@ -77,7 +77,7 @@ export default function AttractionsPage() {
               </CardHeader>
               <CardContent className="bg-white">
                 <CardDescription className="text-gray-600 leading-relaxed italic">
-                  "{dish.desc}"
+                  &quot;{dish.desc}&quot;
                 </CardDescription>
               </CardContent>
             </Card>
