@@ -19,9 +19,9 @@ export default function OrganizingCommitteePage() {
           { href: '/committees/organizing', label: 'Organizing Committee' },
         ]}
       />
-      <Section>
-        <div className="container-wide">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <Section className="py-8 md:py-16">
+        <div className="container-wide px-4 md:px-8">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {organizingCommittee.map((member) => (
               <CommitteeMemberCard key={member.name} member={member} />
             ))}

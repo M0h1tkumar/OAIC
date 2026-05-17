@@ -96,7 +96,7 @@ export default function HeroSection() {
 
                 <Button
                   as={Link}
-                  href="/authors/submission-guidelines"
+                  href="/authors/call-for-papers"
                   className="relative z-10 bg-[#0C527D] hover:bg-[#08283C] text-white border-none rounded-none py-3 px-8 text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-lg w-full sm:w-auto text-center block"
                 >
                   Submit a Paper
