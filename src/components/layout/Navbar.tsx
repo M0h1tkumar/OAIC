@@ -54,58 +54,45 @@ export default function Navbar() {
           {/* Left: Quick Links - Horizontally scrollable on mobile */}
           <div className="flex items-center text-[10px] sm:text-[12px] md:text-[13px] font-medium tracking-tight sm:tracking-wide overflow-x-auto no-scrollbar whitespace-nowrap pr-4">
             <Link
-              href="https://www.ieee.org"
+              href="https://www.ieee.org" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE.org
             </Link>
             <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] flex-shrink-0" aria-hidden="true" />
             <Link
-              href="https://www.comsoc.org"
-              className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
-            >
-              IEEE ComSoc
-            </Link>
-            <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] flex-shrink-0" aria-hidden="true" />
-            <Link
-              href="https://dl.ieee.org/Xplore/home.jsp"
+              href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 flex-shrink-0"
             >
               IEEE Xplore
             </Link>
             <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] hidden sm:block flex-shrink-0" aria-hidden="true" />
             <Link
-              href="#"
+              href="https://standards.ieee.org/" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden sm:block flex-shrink-0"
             >
               IEEE Standards
             </Link>
             <span className="mx-2 sm:mx-3 w-px h-3 bg-[#0C527D] hidden md:block flex-shrink-0" aria-hidden="true" />
             <Link
-              href="#"
+              href="https://spectrum.ieee.org/" target="_blank"
               className="text-white/80 hover:text-white transition-colors duration-200 py-2 hidden md:block flex-shrink-0"
             >
               IEEE Spectrum
             </Link>
           </div>
 
-          {/* Right: Logos/More Sites */}
           <div className="flex items-center gap-x-3 sm:gap-x-5 flex-shrink-0">
-            <div className="hidden lg:flex items-center gap-x-2 text-[11px] font-medium text-white/60 uppercase tracking-widest mr-2">
-              <span>More Sites</span>
-              <ChevronDown className="w-3 h-3" />
-            </div>
-
             <div className="flex items-center gap-x-2 sm:gap-x-4">
               <Link
-                href="https://www.comsoc.org"
+                href="https://aicsoa.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
                 <Image
                   src="/images/sponsors/aiclogo.png"
-                  alt="IEEE ComSoc"
+                  alt="AIC-SOA"
                   className="h-4 sm:h-6 md:h-8 w-auto object-contain brightness-0 invert"
                   width={80}
                   height={16}
@@ -113,14 +100,14 @@ export default function Navbar() {
               </Link>
               <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
               <Link
-                href="https://www.comsoc.org"
+                href="https://soa.ac.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
                 <Image
                   src="/images/sponsors/SOA.png"
-                  alt="IEEE ComSoc"
+                  alt="SOA"
                   className="h-4 sm:h-6 md:h-8 w-auto object-contain "
                   width={80}
                   height={16}
@@ -135,7 +122,7 @@ export default function Navbar() {
               >
                 <Image
                   src="/images/sponsors/future_networks.png"
-                  alt="IEEE ComSoc"
+                  alt="future networks"
                   className="h-4 sm:h-6 md:h-8 w-auto object-contain brightness-0 invert"
                   width={80}
                   height={16}
@@ -143,14 +130,14 @@ export default function Navbar() {
               </Link>
               <div className="w-px h-3 sm:h-4 bg-[#0C527D]" aria-hidden="true" />
               <Link
-                href="https://www.comsoc.org"
+                href="https://testbed.ieee.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-80 hover:opacity-100 transition-opacity duration-200"
               >
                 <Image
                   src="/images/sponsors/innovation_testbed.png"
-                  alt="IEEE ComSoc"
+                  alt="testbed"
                   className="h-8 w-auto object-contain brightness-0 invert"
                   width={80}
                   height={16}
@@ -272,7 +259,7 @@ export default function Navbar() {
         <div className="fixed inset-0 bg-black/30" onClick={() => setMobileOpen(false)} />
         <div className="relative flex flex-col w-full max-w-xs h-full bg-white shadow-xl">
           <div className="flex items-center justify-between px-4 py-3 border-b">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
               <Image src="/images/logo.png" alt="OAIC 2026 Logo" className="h-10" width={120} height={400} />
             </Link>
             <button onClick={() => setMobileOpen(false)} className="p-2 text-gray-500" aria-label="Close menu">
@@ -281,7 +268,7 @@ export default function Navbar() {
           </div>
           <nav className="flex-1 px-2 py-4 space-y-1">
             {navConfig.map((item) => (
-              <MobileNavItem key={item.label} item={item} pathname={pathname} />
+              <MobileNavItem key={item.label} item={item} pathname={pathname} onClose={() => setMobileOpen(false)} />
             ))}
           </nav>
         </div>
@@ -290,7 +277,7 @@ export default function Navbar() {
   );
 }
 
-function MobileNavItem({ item, pathname }: { item: NavItem; pathname: string }) {
+function MobileNavItem({ item, pathname, onClose }: { item: NavItem; pathname: string; onClose: () => void }) {
   const [open, setOpen] = useState(false);
   const isActive = item.children?.some((c) => c.href && pathname.startsWith(c.href)) || (item.href && pathname.startsWith(item.href));
 
@@ -298,6 +285,7 @@ function MobileNavItem({ item, pathname }: { item: NavItem; pathname: string }) 
     return (
       <Link
         href={item.href!}
+        onClick={onClose}
         className={cn(
           'block px-3 py-2 rounded-md text-base font-medium',
           isActive ? 'text-primary-700 bg-primary-100' : 'text-gray-700 hover:bg-gray-100'
@@ -326,6 +314,7 @@ function MobileNavItem({ item, pathname }: { item: NavItem; pathname: string }) 
             <Link
               key={child.label}
               href={child.href!}
+              onClick={onClose}
               className={cn(
                 'block px-3 py-2 rounded-md text-sm',
                 pathname === child.href ? 'text-primary-600' : 'text-gray-600 hover:bg-gray-100'
