@@ -2,7 +2,7 @@ import type { PricingTier } from '@/types';
 
 export const pricingTiers: PricingTier[] = [
   {
-    name: 'Early Bird',
+    name: 'Non-Member',
     cutoff: 'September 15, 2026',
     rows: [
       { category: 'Student (Indian)', amount: 'TBD', currency: 'INR' },
@@ -12,7 +12,7 @@ export const pricingTiers: PricingTier[] = [
     ],
   },
   {
-    name: 'Regular',
+    name: 'IEEE Member',
     cutoff: 'October 10, 2026',
     rows: [
       { category: 'Student (Indian)', amount: 'TBD', currency: 'INR' },

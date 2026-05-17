@@ -8,7 +8,7 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 const dummyImages = [
-  '/images/hero-1.jpg',
+  '/images/hero-1.png',
   '/images/hero-2.jpg',
   '/images/hero-3.jpg',
   '/images/hero-4.jpg'
