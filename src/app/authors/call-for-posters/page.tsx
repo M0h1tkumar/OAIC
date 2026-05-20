@@ -24,7 +24,7 @@ const formatRequirements = [
 const submissionInstructions = [
   'Submit a 2–4 page extended abstract',
   'IEEE double-column format required',
-  'Submit via EDAS',
+  'Submission portal to be announced',
   'Include "Poster:" prefix in the title',
   'Accepted posters receive participation certificate',
   'Best Poster Award presented at closing ceremony',
@@ -104,7 +104,7 @@ export default function CallForPostersPage() {
             <AlertTitle className="font-bold text-xl text-primary-900 ml-2">Key Date</AlertTitle>
             <AlertDescription className="text-lg mt-2 ml-2">
               Poster Submission Deadline:{' '}
-              <strong className="font-bold text-primary-900">August 1, 2026</strong>
+              <strong className="font-bold text-primary-900">31 July 2026</strong>
             </AlertDescription>
           </Alert>
 

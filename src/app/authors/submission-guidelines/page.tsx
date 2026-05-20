@@ -129,7 +129,7 @@ function CameraReady() {
         <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
           After acceptance, authors must prepare and submit the camera-ready
           version by{' '}
-          <strong className="font-bold text-primary-900">September 10, 2026</strong>.
+          <strong className="font-bold text-primary-900">31 October 2026</strong>.
         </p>
         <ul className="space-y-5">
           {[

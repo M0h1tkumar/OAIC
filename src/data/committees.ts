@@ -1,13 +1,10 @@
 import type { CommitteeMember } from '@/types';
 
 export const organizingCommittee: CommitteeMember[] = [
-  { name: 'Prof. Ashutosh Dutta', role: 'Conference Chair', institution: 'Johns Hopkins University Applied Physics Labs (JHU/APL), USA' },
-  { name: 'Prof. Subhransu Ranjan Samantaray', role: 'Conference Chair', institution: 'IIT Bhubaneswar, India' },
-  { name: 'Prof. Abani K Patra', role: 'Technical Program Chair', institution: 'Tufts University, USA' },
-  { name: 'Prof. Renu Sharma', role: 'Publication Chair', institution: "ITER, Siksha 'O' Anusandhan, India" },
-  { name: 'Prof. Manas Kumar Mallick', role: 'Conference Treasurer', institution: "ITER, Siksha 'O' Anusandhan, India" },
-  { name: 'Dr. Bharat Jyoti Sahu', role: 'Information Contact', institution: "ITER, Siksha 'O' Anusandhan, India" },
-  { name: 'Dr. Apul Narayan Dev', role: 'Information Contact', institution: "ITER, Siksha 'O' Anusandhan, India" },
+  { name: 'To be announced', role: 'General Co-Chairs', institution: '' },
+  { name: 'To be announced', role: 'Technical Program Chairs', institution: '' },
+  { name: 'To be announced', role: 'Publicity and Outreach Chairs', institution: '' },
+  { name: 'To be announced', role: 'Local Arrangements Chair', institution: '' },
 ];
 
 export const technicalProgramCommittee: CommitteeMember[] = [
